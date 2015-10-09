@@ -25,5 +25,5 @@ p << r1.p;
 @@
 if not p in p_dict.keys():
         p_dict[p] = True
-	print pf + "," + csv_pos(p2)
+	print pf + "," + csv_pos(p)
 

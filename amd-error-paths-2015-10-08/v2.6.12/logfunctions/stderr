@@ -1,0 +1,2 @@
+init_defs_builtins: /usr/lib64/coccinelle/standard.h
+[Parmap]: aborting due to exception on core 23: Yes_pycocci.Pycocciexception

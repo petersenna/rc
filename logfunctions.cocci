@@ -9,21 +9,21 @@ p_dict = {}
 @r1 exists@
 identifier pf;
 constant char[] c;
-position p;
-expression e;
+position p1, p2;
 @@
-if(...) {
+if@p1(...) {
         ... when any
-        \(pf@p(c, ...)\|pf@p(e, c, ...)\)
+        pf@p2(c, ...)
         ... when any
         return ...;
 }
 
 @script:python@
 pf << r1.pf;
-p << r1.p;
+p1 << r1.p1;
+p2 << r1.p2;
 @@
-if not p in p_dict.keys():
-        p_dict[p] = True
-	print pf + "," + csv_pos(p)
+if not p2 in p_dict.keys() and p1[0].line != p2[0].line:
+        p_dict[p2] = True
+	print pf + "," + csv_pos(p2)
 

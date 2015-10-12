@@ -7,37 +7,23 @@ def csv_pos(p):
 p_dict = {}
 
 @r1 exists@
-identifier printer;
+identifier pf;
 constant char[] c;
-va_list args;
-size_t size;
-expression e;
-position p;
+position p1, p2;
 @@
-if(...) {
+if@p1(...) {
         ... when any
-(
-        printer@p(c, ...);
-|
-	printer@p(c, args);
-|
-        printer@p(e, c, ...);
-|
-        printer@p(e, c, args);
-|
-        printer@p(e, size, c, ...);
-|
-        printer@p(e, size, c, args);
-)
+        pf@p2(c, ...)
         ... when any
         return ...;
 }
 
 @script:python@
-printer << r1.printer;
-p << r1.p;
+pf << r1.pf;
+p1 << r1.p1;
+p2 << r1.p2;
 @@
-if not p in p_dict.keys():
-        p_dict[p] = True
-	print printer + "," + csv_pos(p)
+if not p2 in p_dict.keys() and p1[0].line != p2[0].line:
+        p_dict[p2] = True
+	print pf + "," + csv_pos(p2)
 

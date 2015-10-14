@@ -1,3 +1,10 @@
+@initialize:python@
+@@
+def csv_pos(p):
+    return p[0].column + "," + p[0].column_end + "," + p[0].current_element + \
+    "," + p[0].file + "," + p[0].line + "," + p[0].line_end
+p_dict = {}
+
 @r1@
 position p;
 @@
@@ -174,7 +181,9 @@ netdev_WARN@p(...)
 @script:python@
 p << r1.p;
 @@
-print p[0].file + ": something"
+if not csv_pos(p) in p_dict:
+        p_dict[csv_pos(p)] = True
+	print p[0].file, "something"
 
 @r2@
 position p;
@@ -184,4 +193,6 @@ printk@p(...)
 @script:python@
 p << r2.p;
 @@
-print p[0].file + ": printk"
+if not csv_pos(p) in p_dict:
+        p_dict[csv_pos(p)] = True
+	print p[0].file,  "printk"

@@ -1,8 +1,12 @@
 @initialize:python@
 results_dir << virtual.results_dir;
 @@
+import os
+
 myset = set()
-fp = open(results_dir + r"/../log_function_names_step1/stdout", "r")
+myfile = os.path.join(results_dir, "../log_function_names_step1/stdout")
+
+fp = open(myfile, "r")
 for line in fp:
     myset.add(line[:-1])
 fp.close()

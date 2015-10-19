@@ -2,7 +2,7 @@
 results_dir << virtual.results_dir;
 @@
 myset = set()
-fp = open(results_dir + "/../log_function_names_step1/stdout", "r")
+fp = open(results_dir + r"/../log_function_names_step1/stdout", "r")
 for line in fp:
     myset.add(line[:-1])
 fp.close()

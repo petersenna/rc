@@ -508,6 +508,7 @@ xinfo,14
 xlog_warn,20
 xtrace,86
 xwarn,22
-=Calls not to printk: 68036
-=Calls to printk: 48687
-=Total calls: 116723
+=printk_calls: 48687
+=specialized_calls(^pr_|^ata_|^dev|^fs_|^hid_|^net|^v4l): 7461
+=other_calls: 60575
+=total_calls: 116723

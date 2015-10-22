@@ -442,6 +442,7 @@ xlog_warn,20
 xmon_printf,4
 xtrace,49
 xwarn,7
-=Calls not to printk: 60752
-=Calls to printk: 47386
-=Total calls: 108138
+=printk_calls: 47386
+=specialized_calls(^pr_|^ata_|^dev|^fs_|^hid_|^net|^v4l): 5181
+=other_calls: 55571
+=total_calls: 108138

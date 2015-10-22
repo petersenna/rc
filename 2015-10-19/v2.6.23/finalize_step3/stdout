@@ -524,6 +524,7 @@ xfs_fs_cmn_err,45
 xfs_fs_mount_cmn_err,15
 xfs_fs_repair_cmn_err,8
 xlog_warn,20
-=Calls not to printk: 69404
-=Calls to printk: 47900
-=Total calls: 117304
+=printk_calls: 47900
+=specialized_calls(^pr_|^ata_|^dev|^fs_|^hid_|^net|^v4l): 8898
+=other_calls: 60506
+=total_calls: 117304

@@ -1069,6 +1069,7 @@ xhci_err,24
 xhci_warn,119
 zilog_error,33
 zilog_info,5
-=Calls not to printk: 203036
-=Calls to printk: 41594
-=Total calls: 244630
+=printk_calls: 41594
+=specialized_calls(^pr_|^ata_|^dev|^fs_|^hid_|^net|^v4l): 80919
+=other_calls: 122117
+=total_calls: 244630

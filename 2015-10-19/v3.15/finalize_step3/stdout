@@ -1606,6 +1606,7 @@ xs_stat_cmplt,1
 xx_core.c,1
 zilog_error,33
 zilog_info,5
-=Calls not to printk: 215677
-=Calls to printk: 39750
-=Total calls: 255427
+=printk_calls: 39750
+=specialized_calls(^pr_|^ata_|^dev|^fs_|^hid_|^net|^v4l): 86901
+=other_calls: 128776
+=total_calls: 255427

@@ -1115,6 +1115,7 @@ xhci_dbg,239
 xhci_dbg_trace,127
 xhci_err,26
 xhci_warn,120
-=Calls not to printk: 225095
-=Calls to printk: 36336
-=Total calls: 261431
+=printk_calls: 36336
+=specialized_calls(^pr_|^ata_|^dev|^fs_|^hid_|^net|^v4l): 99676
+=other_calls: 125419
+=total_calls: 261431

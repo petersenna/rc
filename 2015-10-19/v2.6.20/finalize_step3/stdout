@@ -460,6 +460,7 @@ xfs_fs_repair_cmn_err,8
 xlog_warn,20
 xtrace,49
 xwarn,6
-=Calls not to printk: 63996
-=Calls to printk: 47945
-=Total calls: 111941
+=printk_calls: 47945
+=specialized_calls(^pr_|^ata_|^dev|^fs_|^hid_|^net|^v4l): 6334
+=other_calls: 57662
+=total_calls: 111941
